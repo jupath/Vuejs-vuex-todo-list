@@ -2,6 +2,8 @@
 
 > A Vue.js + Vuex Todo list with localStorage and Bootstrap 4.
 
+[CHECK OUT DEMO ON FIREBASE](https://vuejs-todo-bf9a6.firebaseapp.com/)
+
 ## Build Setup
 
 ``` bash
