@@ -1,11 +1,13 @@
 <template>
   <div class="todo-list mt-4">
     <list-header />
-    <list-item
-      v-for="(todo, index) in filteredTodos"
-      :todo="todo"
-      :key="index"
-    />
+    <transition-group name="fade" enter-active-class="animated fadeInUp" leave-active-class="animated fadeOutRight">
+      <list-item
+        v-for="(todo, index) in filteredTodos"
+        :todo="todo"
+        :key="index"
+      />
+    </transition-group>
   </div>
 </template>
 
@@ -13,6 +15,7 @@
 import { mapState } from 'vuex';
 import ListHeader from './ListHeader';
 import ListItem from './ListItem';
+import '../../node_modules/animate.css/animate.min.css';
 
 export default {
   computed: {
@@ -36,3 +39,15 @@ export default {
   }
 }
 </script>
+
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .2s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
