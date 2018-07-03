@@ -1,4 +1,4 @@
-# vue-vuex-todo
+# Vue.js + Vuex Todo list
 
 > A Vue.js + Vuex Todo list with localStorage and Bootstrap 4.
 
